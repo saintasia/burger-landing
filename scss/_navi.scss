@@ -1,0 +1,102 @@
+nav {
+    display: block;
+    width: 100%;
+    float: left;
+    font-family: $main-text;
+    text-transform: uppercase;
+    font-weight: $normal;
+    
+    .toggle {
+        display: none;
+    }
+    
+    .navi {
+        float: right;
+        @media only screen and (max-width: $maxwidth){
+            float: none;
+        }
+    }
+    
+    
+    ul {
+        margin:0;
+        padding:0;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        right: 0;
+        
+        li{
+            display: inline-block;
+            list-style: none;
+            line-height: 60px;
+            margin-left: 15px;
+            a {
+                text-decoration: none;
+                color: white;
+                @include transition($tzn);
+            }
+            :hover {
+                color: $orange;
+                border-bottom: $orange 3px solid;
+            }
+            i.fa {
+                display: none;
+            }
+        }
+        
+    }
+    
+    .logo {
+        display: inline-block;
+        float: left;
+        img {
+            
+            height: 60px;
+            width: auto;
+        }
+    }
+    @media only screen and (max-width: $maxwidth) {
+        ul {
+            background-color: $orange;
+            margin-right: 0;
+            width: 90%;
+            margin: 0 5%;
+            @include border-radius(3px);
+            position: fixed;
+            z-index: 100;
+            li {
+                margin-left: 0;
+                text-align: center;
+                width: 23.9%;
+                box-sizing: border-box;
+                line-height: 30px;
+                :hover, :focus {
+                    border-bottom: 0;
+                    color: $reddish;
+                    }
+                a {
+                    font-size: 10px;
+                    text-decoration: none;
+                    text-shadow: none;
+                    color: $reddish;
+                    :hover {
+                    border-bottom: 0;
+                    color: $reddish;
+                }
+                }
+                
+                i.fa {
+                    display: block;
+                    padding-top: 10px;
+                }
+            }
+        }
+        .logo {
+            display: block;
+            margin-top: 100px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

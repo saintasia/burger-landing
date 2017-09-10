@@ -1,0 +1,622 @@
+// variables
+$main-text: 'Roboto', sans-serif;
+$header-text:  'Lobster', sans-serif;
+$normal: 400;
+$bold: 700;
+$orange: #f6bc13;
+$dark-orange: #e7b522;
+$brown: #410a00;
+$bshadow: 0px 5px 20px 0px rgba(0,0,0,0.19);
+$fshadow: 0px 0px 5px rgba(22, 22, 22, 0.75);
+$tzn: all 300ms ease-in-out;
+$maxwidth: 768px;
+$grey: #837972;
+$reddish: #382c30;
+
+//mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($bshadow) {
+  -webkit-box-shadow: $bshadow;
+     -moz-box-shadow: $bshadow;
+      -ms-box-shadow: $bshadow;
+          box-shadow: $bshadow;
+}
+
+@mixin text-shadow($fshadow) {
+  -webkit-text-shadow: $fshadow;
+     -moz-text-shadow: $fshadow;
+      -ms-text-shadow: $fshadow;
+          text-shadow: $fshadow;
+}
+
+
+@mixin transition($tzn) {
+  -webkit-transition: $tzn;
+     -moz-transition: $tzn;
+      -ms-transition: $tzn;
+          transition: $tzn;
+}
+
+// grid setting 
+$neat-grid: (
+  columns: 12,
+  gutter: 0
+);
+
+
+body {
+    font-family: $main-text;
+    min-width: 320px;
+    @media only screen and (max-width: $maxwidth) {
+        font-size: 80%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.wrap {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hero {
+    background: url("../img/burger-bg.jpg") center bottom no-repeat;
+    background-size: cover;
+    min-height: 480px;
+    height: auto;
+    padding-top: 3%;
+    @include text-shadow($fshadow);
+}
+
+h2 {
+    margin:0;
+    font-family: $header-text;
+    font-size: 26px;
+    font-weight: $normal;
+    @media only screen and (max-width: $maxwidth) {
+        font-size: 20px;
+    }
+}
+
+h2.brn:before, h2.brn:after {
+    content: url(../img/curl-brn.svg);
+    height: 20px;
+    width: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+
+h2.ylw:before, h2.ylw:after {
+    content: url(../img/curl-ylw.svg);
+    height: 20px;
+    width: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+
+h2.sngl:before {
+    margin-left: 0;
+}
+
+.brn {
+    color: $brown;
+}
+
+.ylw {
+    color: $orange;
+}
+
+
+.heading {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10vh;
+    p {
+        line-height: 1.6em;
+        letter-spacing: 1px;
+        font-family: $main-text;
+        font-weight: $normal;
+    }
+    h2 {
+        font-family: $main-text;
+        font-weight: $bold;
+        color: $orange;
+    }
+    @media only screen and (max-width: $maxwidth) {
+        margin-top: 5vh;
+    }
+}
+
+.btn-main {
+        display: inline-block;
+        padding: 10px 30px;
+        margin-top: 16px;
+        background-color: $orange;
+        @include border-radius(3px);
+        color: $brown;
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: $bold;
+        @include transition($tzn);
+    &:hover {
+        background-color: $dark-orange;
+    }
+    }
+
+.light {
+    background: url("../img/bg-light.jpg") center bottom no-repeat;
+    background-size: cover;
+}
+
+.menu {
+    padding: 8% 2%;
+    text-align: center;
+    .filter {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        li {
+            display: inline-block;
+            @media only screen and (max-width: $maxwidth){
+                display: block;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                padding: 10px 40px;
+                font-weight: bold;
+                background-color: #fff;
+                @include border-radius(3px);
+                color: $orange;
+                font-weight: $normal;
+                margin: 0 4px;
+                @include box-shadow($bshadow);
+                @include transition($tzn);
+                &:hover {
+                    box-shadow: none;
+                }
+                @media only screen and (max-width: $maxwidth) {
+                    
+                    margin-top: 10px;
+                }
+                
+            }
+            .active {
+                background-color: $orange;
+                color: #fff;
+                }
+        }
+    }
+    .menu-card {
+        margin-top: 5%;
+        background-color: #fff;
+        @include border-radius(3px);
+        @include box-shadow($bshadow);
+        padding: 5%;
+        @include grid-container;
+        h3 {
+            color: #fff;
+            font-family: $header-text;
+            @include text-shadow($fshadow);
+            font-size: 28px;
+            font-weight: $normal;
+            letter-spacing: 1px;
+        }
+        .main {
+            padding: 40px 10px;
+            background: url(../img/menu-main.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        
+        .desserts {
+            padding: 40px 10px;
+            background: url(../img/dessert.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        
+        .drinks {
+            padding: 40px 10px;
+            background: url(../img/drinks.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        
+        .half {
+            ul {
+            list-style: none;
+            margin: 0;
+            padding: 6%;
+            margin-top: 2%;
+            color: $grey;
+            font-size: 16px;
+            font-family: $header-text;
+            font-weight: $normal;
+            letter-spacing: 2px;
+            @media only screen and (max-width: $maxwidth) {
+               padding: 0 6%;
+            }
+                
+            li {
+                text-align: left;
+                line-height: 2.4em;
+            }
+            .price {
+                color: $orange;
+                float: right;
+                &:before {
+                    content: "...........    ";
+                    color: #ccc;
+                }
+            }
+        }
+        }
+    }
+}
+
+.full {
+    @include grid-column(12);
+    box-sizing: border-box;
+}
+
+.half {
+    @include grid-column(6);
+    box-sizing: border-box;
+    @media only screen and (max-width: $maxwidth) {
+        @include grid-column(12);
+    }
+}
+
+.third {
+    @include grid-column(4);
+    box-sizing: border-box;
+    @media only screen and (max-width: $maxwidth) {
+        @include grid-column(12);
+    }
+}
+
+.two-third {
+    @include grid-column(8);
+    box-sizing: border-box;
+    @media only screen and (max-width: $maxwidth) {
+        @include grid-column(12);
+    }
+}
+
+.dark {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a131b+0,3a2524+100 */
+    background: #1a131b; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1a131b 0%, #3a2524 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1a131b 0%,#3a2524 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1a131b 0%,#3a2524 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a131b', endColorstr='#3a2524',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #fff;
+    padding: 8% 2%;
+    overflow: hidden;
+    h2 {
+        font-weight: $normal;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
+.evnt-calendar {
+    @include grid-container;
+    position: relative;
+    overflow: hidden;
+    .scroll {
+        width: 300%;
+    }
+    .evt {
+        @include grid-container;
+        margin-top: 20px;
+        width: 33.333%;
+        float: left;
+    }
+    
+    .third {
+        padding: 3%;
+    }
+    .two-third {
+        padding: 3%;
+    }
+    .date {
+        color: #fff;
+        font-family: $header-text;
+        font-size: 22px;
+        letter-spacing: 1px;
+        i {
+            margin-right: 10px;
+            font-size: 16px;
+            color: $orange;
+        }
+        span {
+            margin-left: 10px;
+            font-family: $main-text;
+            color: $orange;
+            font-size: 16px;
+            font-weight: $normal;
+        }
+    }
+    p {
+        line-height: 1.6em;
+    }
+    .arrows {
+        position: absolute;
+        top: 150px;
+        width: 100%;
+        a {
+            color: $orange;
+            display: inline-block;
+            -webkit-transition: all 400ms ease-in-out;
+            -moz-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out;
+        }
+        .right {
+            float: right;
+            -webkit-transform: translateX(400px);
+            -moz-transform: translateX(400px);
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        .left {
+            -webkit-transform: translateX(-400px);
+            -moz-transform: translateX(-400px);
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+    }
+    
+    .show .right {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+        }
+    .show .left {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .handlers {
+        list-style:none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        li {
+            text-align: center;
+            display: inline-block;
+            a {
+                display: block;
+                height: 10px;
+                width: 10px;
+                border-radius: 20px;
+                background-color: #fff;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+            .active {
+                background-color: $orange;
+            }
+        }
+    }   
+}
+
+.about {
+    @include grid-container;
+    padding: 8% 2%;
+    h5 {
+        font-size: 17px;
+    }
+    img {
+        border-radius: 50%;
+    }
+    .third {
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    p {
+        color: $grey;
+        line-height: 2em;
+    }
+    .tel {
+        color: $orange;
+        font-family: $header-text;
+        font-size: 26px;
+        i {
+            padding-right: 10px;
+        }
+    }
+}
+
+.hppy-hr {
+    background: url("../img/happy-hour.jpg") center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 8% 2%;
+    color: #fff;
+    small {
+        font-size: 18px;
+        line-height: 2em;
+    }
+    .submenu {
+        @include grid-container;
+        text-align: left;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 6% 10%;
+            margin-top: 2%;
+            color: #fff;
+            font-size: 16px;
+            font-family: $header-text;
+            font-weight: $normal;
+            letter-spacing: 2px;
+            @media only screen and (max-width: $maxwidth) {
+                padding: 0 6%;
+            }
+                
+            li {
+                text-align: left;
+                line-height: 2.4em;
+            }
+            .price {
+                color: $orange;
+                float: right;
+                &:before {
+                    content: "...........    ";
+                    color: #fff;
+               }
+            }
+        }
+    }   
+}
+
+.parallax {
+    background-attachment: fixed;
+    @media only screen and (max-width: $maxwidth){
+        background-attachment: scroll;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+
+.contact {
+    background-color: #fff;
+    color: $grey;
+    padding: 8% 2%;
+    .subscribe {
+        @include grid-container;
+        input {
+            margin-top: 15px;
+            margin-right: 10px;
+            height: 36px;
+            width: 200px;
+            background-color: #ededed;
+            border:0;
+            padding-left: 14px;
+        }
+        input[type="submit"] {
+            display: block;
+            @include border-radius(3px);
+            border: 1px $orange solid;
+            text-align: center;
+            color: $orange;
+            font-size: 18px;
+            line-height: 30px;
+            text-transform: uppercase;
+            background-color: #fff;
+            width: 215px;
+            @include transition($tzn);
+            &:hover {
+                background-color: $orange;
+                color: #fff;
+            }
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        list-style: none;
+        font-size: 16px;
+        line-height: 2em;
+        width: 280px;
+        float: right;
+        i {
+            color: $orange;
+            display: absolute;
+            margin-left: -25px;
+            width: 25px;
+        }
+    }
+    @media only screen and (max-width: $maxwidth) {
+        ul {
+            float: left;
+        }
+        ul li {
+            padding-left: 30px;
+        }
+    }
+}
+
+footer {
+    background-color: $reddish;
+    color: #fff;
+    padding: 2% 2% 3% 2%;
+    copy {
+        display: inline-block;
+        float: left;
+        font-size: 12px;
+    }
+    .social {
+        display: inline-block;
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+        a {
+            color: $orange;
+            text-decoration: none;
+            padding-left: 10px;
+            }
+    }
+    @media only screen and (max-width: $maxwidth) {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 3%;
+    }
+}
+
+
+//preloader
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999
+}
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../img/preload.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px
+}

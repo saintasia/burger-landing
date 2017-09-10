@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- animate min css -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- load google maps -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="preloader">
+            <div id="status"></div>
+        </div>
+        <div class="hero">
+            <div class="wrap">
+                <nav>
+                    <div class="navi">
+                    <a href="#" class="toggle">Menu</a>
+                    <ul>
+                        <li><a href="#menu" class="smooth"><i class="fa fa-cutlery" aria-hidden="true"></i>Menu</a></li>
+                        <li><a href="#events" class="smooth"><i class="fa fa-music" aria-hidden="true"></i>
+Events</a></li>
+                        <li><a href="#about" class="smooth"><i class="fa fa-info" aria-hidden="true"></i>About</a></li>
+                        <li><a href="#map" class="smooth"><i class="fa fa-map-marker" aria-hidden="true"></i>Access</a></li>
+                    </ul>
+                    <a class="logo" href="index.html"><img src="img/logo-light.svg"></a>
+                    </div>
+                </nav>
+                <div class="heading">
+                <h2 class="wow fadeInRight" data-wow-delay="1s">BEST BURGERS IN TOWN</h2>
+                <p class="wow fadeInRight" data-wow-delay="1s">Pok pok semiotics normcore iPhone austin waistcoat poke.<br> Poke polaroid roof party authentic ethical chambray<br> sustainable flannel microdosing.</p>
+                <a href="#map" class="btn-main smooth wow fadeInUp" data-wow-delay="1s">ACCESS</a>
+                </div>
+            </div>
+        </div>
+        <section class="light parallax" id="menu">
+            <div class="wrap menu">
+            <h2 class="brn wow fadeInLeft">Menu</h2>
+            <ul class="filter wow fadeInUp">
+                <li><a href="#main" class="active">Main</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+            </ul>
+            <div class="menu-card wow fadeInUp">
+                <!-- main id -->
+                <div id="main" class="card">
+                <div class="full main">
+                    <h3>Main</h3>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                        <li>Main Burger<span class="price">$15</span></li>
+                    </ul>
+                </div>
+                </div> <!-- main id end -->
+                <!-- main id -->
+                <div id="desserts" class="card hidden">
+                <div class="full desserts">
+                    <h3>Desserts</h3>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li>Tasty Dessert<span class="price">$9</span></li>
+                    </ul>
+                </div>
+                </div> <!-- main id end -->
+                <!-- main id -->
+                <div id="drinks" class="card hidden">
+                <div class="full drinks">
+                    <h3>Drinks</h3>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li>Craft Beer<span class="price">$7</span></li>
+                    </ul>
+                </div>
+                </div> <!-- main id end -->
+            </div> <!-- Menu card DIV end -->
+            </div> <!-- Wrapper end -->
+        </section> <!-- Menu section end -->
+        <section class="dark" id="events">
+            <div class="wrap">
+                <h2 class="ylw wow fadeInRight">Events</h2>
+                <div class="evnt-calendar">
+                <div class="scroll wow fadeInUp">
+                <!-- first artist -->
+                <div class="evt">
+                    <div class="third">
+                        <img src="img/event1.jpg">
+                    </div>
+                    <div class="two-third">
+                        <h3 class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>Dec 28th<span>Entrance: 8PM~</span></h3>
+                        <p>Vice heirloom normcore, green juice twee gentrify lomo. Keytar meh tattooed lo-fi tacos chartreuse try-hard. Hammock beard messenger bag pitchfork quinoa enamel pin post-ironic church-key bespoke swag thundercats lo-fi. </p>
+                        <a href="#" class="btn-main">Learn more</a>
+                    </div>
+                </div> <!-- artist end -->
+                <div class="evt">
+                    <div class="third">
+                        <img src="img/event2.jpg">
+                    </div>
+                    <div class="two-third">
+                        <h3 class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>Dec 31st<span>Entrance: 6PM~</span></h3>
+                        <p>Vice heirloom normcore, green juice twee gentrify lomo. Keytar meh tattooed lo-fi tacos chartreuse try-hard. Hammock beard messenger bag pitchfork quinoa enamel pin post-ironic church-key bespoke swag thundercats lo-fi. </p>
+                        <a href="#" class="btn-main">Learn more</a>
+                    </div>
+                </div> <!-- artist end -->
+                <div class="evt">
+                    <div class="third">
+                        <img src="img/event3.jpg">
+                    </div>
+                    <div class="two-third">
+                        <h3 class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>Jan 1st<span>Entrance: 7:30PM~</span></h3>
+                        <p>Vice heirloom normcore, green juice twee gentrify lomo. Keytar meh tattooed lo-fi tacos chartreuse try-hard. Hammock beard messenger bag pitchfork quinoa enamel pin post-ironic church-key bespoke swag thundercats lo-fi. </p>
+                        <a href="#" class="btn-main">Learn more</a>
+                    </div>
+                </div> <!-- artist end -->
+                </div> <!-- scroll end -->
+                <div class="full wow fadeInUp">
+                    <div class="arrows">
+                        <a href="#" id="prev" class="left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                        <a href="#" id="next" class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                    <ul class="handlers">
+                        <li><a class="active" href="#artist1"></a></li>
+                        <li><a href="#artist2"></a></li>
+                        <li><a href="#artist3"></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="light parallax" id="about">
+            <div class="wrap about">
+                <div class="two-third  wow fadeInLeft">
+                    <h2 class="brn sngl">About</h2>
+                    <h5 class="ylw">Intelligentsia paleo cliche art party shaman. </h5>
+                    <p>Stumptown copper mug lyft offal, VHS occupy bicycle rights hashtag squid raclette. Aesthetic chillwave cold-pressed kitsch fashion axe plaid. Seitan taiyaki fam mixtape meh edison bulb hella 90's 3 wolf moon helvetica umami quinoa vaporware. </p>
+                    <p class="tel"><i class="fa fa-phone" aria-hidden="true"></i>010-2345-6789</p>
+                </div>
+                <div class="third wow fadeInRight">
+                    <img src="img/cheff.jpg">
+                </div>
+            </div>
+        </section>
+        <!-- happy hour -->
+        <section class="hppy-hr parallax">
+            <div class="wrap">
+            <h2 class="ylw wow fadeInRight">Happy Hour</h2>
+            <small class="wow fadeInLeft">Mon.-Fri.  17:30-19:00</small>
+            <div class="submenu wow fadeInUp">
+                <div class="half">
+                    <ul>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <ul>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                        <li>Draft Beer<span class="price">$5</span></li>
+                    </ul>
+                </div> 
+            </div>
+            </div>
+        </section>
+        <!-- Map -->
+        <div id="map" class="wow fadeIn"></div>
+        <!-- Contact -->
+        <section class="contact wow fadeIn">
+            <div class="wrap subscribe">
+                <div class="half">
+                    <form role="form">
+                    <h2 class="ylw sngl">Subsctibe for updates</h2>
+                    <input type="text" placeholder="Your name" required="required">
+                    <input type="email" placeholder="email@email.com" required="required">
+                    <input type="submit" val="Subscribe">
+                    </form>
+                </div>
+                <div class="half">
+                    <ul class="info">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>010-2345-6789</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>burgers@burgers.com</li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>123 6th St. <br>
+                            Melbourne, FL 32904</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="wow fadeIn">
+            <copy>Copyright @ Your burger shop 2017.</copy>
+            <ul class="social">
+                <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </footer>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+        <!-- initialize wow -->
+        <script src="js/wow.min.js"></script>
+        <script> new WOW().init(); </script>
+    </body>
+</html>
